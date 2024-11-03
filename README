@@ -5,17 +5,17 @@
 ### Получить список гостей
 GET /api/guest_lists
 
-![Получить список гостей](image.png)
+![Получить список гостей](images/image.png)
 
 ### Получить информацию о конкретном госте
 GET /api/guest_lists/{id}
 
-![Информация о госте](image-1.png)
+![Информация о госте](images/image-1.png)
 
 ### Обновить информацию о конкретном госте
 PATCH /api/guest_lists/{id}
 
-![Обновить гостя](image-2.png)
+![Обновить гостя](images/image-2.png)
 
 
 ## Скринкаст Tables
@@ -23,24 +23,24 @@ PATCH /api/guest_lists/{id}
 ### Получить список столов
 GET /api/tables
 
-![Получить список столов](image-3.png)
+![Получить список столов](images/image-3.png)
 
 ### Получить информацию о конкретном столе
 GET /api/tables/{id}
 
-![Информация о столе](image-4.png)
+![Информация о столе](images/image-4.png)
 
 ### Обновить информацию о конкретном столе
 PATCH /api/tables/{id}
 
-![Обновить стол](image-5.png)
+![Обновить стол](images/image-5.png)
 
 ### Получить список гостей за столом
 GET /api/tables/{id}/guests
 
-![Гости за столом](image-6.png)
+![Гости за столом](images/image-6.png)
 
 ### Получить статистику по столам
 GET /api/tables_stats
 
-![Статистика по столам](image-7.png)
+![Статистика по столам](images/image-7.png)
