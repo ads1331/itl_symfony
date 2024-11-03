@@ -1,39 +1,46 @@
-## symfony test api itlabs
+# Symfony Test API ITLabs
 
 ## Скринкаст GuestList
 
+### Получить список гостей
 GET /api/guest_lists
 
-![alt text](image.png)
+![Получить список гостей](image.png)
 
+### Получить информацию о конкретном госте
 GET /api/guest_lists/{id}
 
-![alt text](image-1.png)
+![Информация о госте](image-1.png)
 
+### Обновить информацию о конкретном госте
 PATCH /api/guest_lists/{id}
 
-![alt text](image-2.png)
+![Обновить гостя](image-2.png)
 
 
 ## Скринкаст Tables
 
-GET api/tables
+### Получить список столов
+GET /api/tables
 
-![alt text](image-3.png)
+![Получить список столов](image-3.png)
 
-GET api/tables/{id}
+### Получить информацию о конкретном столе
+GET /api/tables/{id}
 
-![alt text](image-4.png)
+![Информация о столе](image-4.png)
 
-PATCH api/tables/{id}
+### Обновить информацию о конкретном столе
+PATCH /api/tables/{id}
 
-![alt text](image-5.png)
+![Обновить стол](image-5.png)
 
+### Получить список гостей за столом
+GET /api/tables/{id}/guests
 
-GET api/tables/{id}/guests
+![Гости за столом](image-6.png)
 
-![alt text](image-6.png)
+### Получить статистику по столам
+GET /api/tables_stats
 
-GET api/tables_stats
-
-![alt text](image-7.png)
+![Статистика по столам](image-7.png)
