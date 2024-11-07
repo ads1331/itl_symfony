@@ -134,4 +134,8 @@ class Table
     {
     return $this->guests; 
     }
+    public function __toString(): string
+    {
+        return $this->getNum() . ' - ' . $this->getDescription(); 
+    }
 }

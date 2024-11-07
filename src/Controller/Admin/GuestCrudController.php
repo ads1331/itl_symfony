@@ -27,11 +27,11 @@ class GuestCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
         return [
-            TextField::new('name', 'Имя'),  
-            BooleanField::new('isPresent', 'Присутствует'),  
+            TextField::new('name', 'Имя'),
+            BooleanField::new('isPresent', 'Присутствует'),
 
             AssociationField::new('table', 'Стол')
-                ->autocomplete() 
+                ->autocomplete()
         ];
     }
 }
