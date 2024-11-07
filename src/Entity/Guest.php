@@ -40,6 +40,7 @@ class Guest
      * @ORM\JoinColumn(name="tables_id", referencedColumnName="id", nullable=false)
      */
     private ?Table $table;
+    
 
     public function getTable(): ?Table
     {

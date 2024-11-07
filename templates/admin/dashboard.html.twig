@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Admin Dashboard{% endblock %}
+
+{% block body %}
+    <h1>Welcome to the Admin Dashboard</h1>
+    <p>This is your custom admin panel.</p>
+
+    <div class="dashboard-content">
+        <h2>General Information</h2>
+        
+        <!-- Статистика для гостей -->
+        <div class="stats">
+            <h3>Total Guests: {{ totalGuests }}</h3>
+            <h3>Total Tables: {{ totalTables }}</h3>
+            <h3>Total Guest Lists: {{ totalGuestLists }}</h3>
+        </div>
+
+        <!-- Ссылки на основные разделы -->
+        <div class="links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="{{ path('admin_guest_index') }}">Manage Guests</a></li>
+<li><a href="{{ path('admin_table_index') }}">Manage Tables</a></li>
+<li><a href="{{ path('admin_guest_list_index') }}">Manage Guest Lists</a></li>
+
+            </ul>
+        </div>
+    </div>
+{% endblock %}
