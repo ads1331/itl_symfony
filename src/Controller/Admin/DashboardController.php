@@ -3,7 +3,6 @@ namespace App\Controller\Admin;
 
 use App\Entity\Guest;
 use App\Entity\Table;
-use App\Entity\GuestList;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
 use EasyCorp\Bundle\EasyAdminBundle\Router\AdminUrlGenerator;
 use Symfony\Component\HttpFoundation\Response;
@@ -15,14 +14,16 @@ class DashboardController extends AbstractDashboardController
     #[Route('/admin', name: 'admin')]
     public function index(): Response
     {
+        if (!$this->isGranted('ROLE_ADMIN')) {
+            return $this->redirectToRoute('login');
+        }
+
         $adminUrlGenerator = $this->container->get(AdminUrlGenerator::class);
-        
         return $this->redirect($adminUrlGenerator->setController(GuestCrudController::class)->generateUrl());
     }
 
     public function configureMenuItems(): iterable
     {
-        yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
         yield MenuItem::linkToCrud('Guests', 'fas fa-users', Guest::class);
         yield MenuItem::linkToCrud('Tables', 'fas fa-table', Table::class);
     }
