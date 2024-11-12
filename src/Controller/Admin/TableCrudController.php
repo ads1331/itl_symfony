@@ -1,10 +1,11 @@
-<?
+<?php
 namespace App\Controller\Admin;
 
 use App\Entity\Table;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
-use EasyCorp\Bundle\EasyAdminBundle\Config\Fields;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
 
 class TableCrudController extends AbstractCrudController
 {
@@ -24,10 +25,9 @@ class TableCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
         return [
-            'num',
-            'description',
-            'maxGuests',
-
+            IntegerField::new('num', 'Номер стола'),
+            TextField::new('description', 'Описание'),
+            IntegerField::new('maxGuests', 'Максимум гостей'),
         ];
     }
 }
